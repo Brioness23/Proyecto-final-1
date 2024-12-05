@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Graficas en Django</title>
+    <style>
+        h2 {
+            text-align: center;
+        }
+        .chart-container {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .chart {
+            width: 45%;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center;">Bienvenido a la Pagina de Graficas</h1>
+
+    <div class="chart-container">
+        <div class="chart">
+            <h2>Grafica de Lineas</h2>
+            <img src="data:image/png;base64,{{ line_chart }}" alt="Grafica de Lineas"/>
+        </div>
+
+        <div class="chart">
+            <h2>Grafica de Barras</h2>
+            <img src="data:image/png;base64,{{ bar_chart }}" alt="Grafica de Barras"/>
+        </div>
+
+        <div class="chart">
+            <h2>Grafica de Dispersion</h2>
+            <img src="data:image/png;base64,{{ scatter_chart }}" alt="Grafica de Dispersion"/>
+        </div>
+
+        <div class="chart">
+            <h2>Grafica de Pastel</h2>
+            <img src="data:image/png;base64,{{ pie_chart }}" alt="Grafica de Pastel"/>
+        </div>
+
+        <div class="chart">
+            <h2>Grafica de Histograma</h2>
+            <img src="data:image/png;base64,{{ histogram_chart }}" alt="Grafica de Histograma"/>
+        </div>
+
+        <div class="chart">
+            <h2>Grafica de Cajas</h2>
+            <img src="data:image/png;base64,{{ boxplot_chart }}" alt="Grafica de Cajas"/>
+        </div>
+    </div>
+</body>
+</html>
